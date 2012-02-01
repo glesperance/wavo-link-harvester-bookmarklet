@@ -63,7 +63,7 @@ reporting to the wavo servers in the future.
 ##### Documentation
 
 Each of the module’s routine/functions needs to be properly documented
-using (jsDocs)[http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Comments#Comments]. The required jsDocs elements are *@param*, *@return*,
+using [jsDocs](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Comments#Comments). The required jsDocs elements are *@param*, *@return*,
 and *@constructor* when applicable.
 
 ##### Extensibility
@@ -91,7 +91,7 @@ the fulfillment of this requirement :
 ##### Licensing
 
 In order to avoid costly legal process, this software will have to be
-released under the (MIT License)[http://en.wikipedia.org/wiki/MIT\_License].
+released under the [MIT License](http://en.wikipedia.org/wiki/MIT\_License).
 
 Hence it should bare the following license on top of all its files :
 
