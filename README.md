@@ -10,7 +10,7 @@ music-videos from across the web and save them in their wavo
 collections.
 
 As a secondary purpose, the following module will be given as an
-assignment to *Baptiste Bonnaudet <baptiste.bonnaudet@gmail.com\> *in
+assignment to *Baptiste Bonnaudet* in
 order to assess his programming skills as well as his ability to work in
 an autonomous fashion when provided with general requirements.
 
@@ -63,7 +63,7 @@ reporting to the wavo servers in the future.
 ##### Documentation
 
 Each of the module’s routine/functions needs to be properly documented
-using jsDocs[^1]. The required jsDocs elements are *@param*, *@return*,
+using (jsDocs)[http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Comments#Comments]. The required jsDocs elements are *@param*, *@return*,
 and *@constructor* when applicable.
 
 ##### Extensibility
@@ -91,7 +91,7 @@ the fulfillment of this requirement :
 ##### Licensing
 
 In order to avoid costly legal process, this software will have to be
-released under the MIT License[^2].
+released under the (MIT License)[http://en.wikipedia.org/wiki/MIT\_License].
 
 Hence it should bare the following license on top of all its files :
 
@@ -117,10 +117,3 @@ Hence it should bare the following license on top of all its files :
     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
     TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
     THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[^1]: see
-    http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Comments\#Comments
-
-[^2]: http://en.wikipedia.org/wiki/MIT\_License
-
-
