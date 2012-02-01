@@ -1,0 +1,462 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Wavo Basic Link Harvester Bookmarklet Requirements Specification
+\end_layout
+
+\begin_layout Author
+Gabriel Lespérance <gabriel@wavo.me>
+\end_layout
+
+\begin_layout Date
+February 1st, 2012
+\end_layout
+
+\begin_layout Section
+Purpose
+\end_layout
+
+\begin_layout Standard
+The purpose of this software project is to provide a basis for the development
+ of the 
+\emph on
+Wavo Link Harvester
+\emph default
+ that will allow users to submit the music-video 
+\emph on
+links and
+\emph default
+ 
+\emph on
+embedded objects
+\emph default
+ contained in a webpage to the wavo servers for further processing.
+\end_layout
+
+\begin_layout Standard
+This module will eventually be extended to allow users to save music-videos
+ from across the web and save them in their wavo collections.
+\end_layout
+
+\begin_layout Standard
+As a secondary purpose, the following module will be given as an assignment
+ to 
+\emph on
+Baptiste Bonnaudet <baptiste.bonnaudet@gmail.com> 
+\emph default
+in order to assess his programming skills as well as his ability to work
+ in an autonomous fashion when provided with general requirements.
+\end_layout
+
+\begin_layout Section
+Requirements
+\end_layout
+
+\begin_layout Subsection
+Functional Requirements
+\end_layout
+
+\begin_layout Subsubsection
+Gathering Elements
+\end_layout
+
+\begin_layout Paragraph
+Gathering Links Elements
+\end_layout
+
+\begin_layout Standard
+The following URI types must be gathered :
+\end_layout
+
+\begin_layout Itemize
+youtube links
+\end_layout
+
+\begin_layout Itemize
+Vimeo links
+\end_layout
+
+\begin_layout Itemize
+soundcloud links
+\end_layout
+
+\begin_layout Paragraph
+Gathering Embedded Objects
+\end_layout
+
+\begin_layout Standard
+The following embedded objects types must be gathered :
+\end_layout
+
+\begin_layout Itemize
+youtube links
+\end_layout
+
+\begin_layout Itemize
+Vimeo links
+\end_layout
+
+\begin_layout Itemize
+soundcloud links
+\end_layout
+
+\begin_layout Paragraph
+Gathering iframe Elements
+\end_layout
+
+\begin_layout Standard
+The following iframe types must be gathered :
+\end_layout
+
+\begin_layout Itemize
+youtube links
+\end_layout
+
+\begin_layout Itemize
+Vimeo links
+\end_layout
+
+\begin_layout Itemize
+soundcloud links
+\end_layout
+
+\begin_layout Subsubsection
+Logging Content to the Console
+\end_layout
+
+\begin_layout Standard
+The elements gathered must be printed 
+\emph on
+console.log
+\emph default
+ as they are found in the DOM.
+ 
+\end_layout
+
+\begin_layout Standard
+This logging facility must be easily extensible in order to allow reporting
+ to the wavo servers in the future.
+\end_layout
+
+\begin_layout Paragraph
+Non-Functional Requirements
+\end_layout
+
+\begin_layout Subparagraph
+Documentation
+\end_layout
+
+\begin_layout Standard
+Each of the module's routine/functions needs to be properly documented using
+ jsDocs
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+see http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=C
+omments#Comments
+\end_layout
+
+\end_inset
+
+.
+ The required jsDocs elements are 
+\emph on
+@param
+\emph default
+, 
+\emph on
+@return
+\emph default
+, and 
+\emph on
+@constructor
+\emph default
+ when applicable.
+\end_layout
+
+\begin_layout Subparagraph
+Extensibility
+\end_layout
+
+\begin_layout Standard
+The module must be easily extensible in order to allow for the gathering
+ of object types other than 
+\emph on
+links
+\emph default
+ 
+\emph on
+embedded objects
+\emph default
+., or 
+\emph on
+iframes.
+\end_layout
+
+\begin_layout Standard
+Each of these sub-modules must also be easily extensible in order to allow,
+ for example, the gathering of additional 
+\emph on
+types
+\emph default
+ of link.
+\end_layout
+
+\begin_layout Subparagraph
+Maintainability
+\end_layout
+
+\begin_layout Standard
+The module must be easily maintainable for all users.
+ Hence, the code is supposed to loaded from a central public repository
+ when the user activates the bookmarklet.
+ 
+\end_layout
+
+\begin_layout Standard
+The using the following code snippet as the bookmarked URI should allow
+ the fulfillment of this requirement : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+javascript:(function(){
+\end_layout
+
+\begin_layout Plain Layout
+
+  var a = document.createElement('script');
+\end_layout
+
+\begin_layout Plain Layout
+
+  a.setAttribute('src', JS_MODULE_URI);document.body.appendChild(a);}
+\end_layout
+
+\begin_layout Plain Layout
+
+)();
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Licensing
+\end_layout
+
+\begin_layout Standard
+In order to avoid costly legal process, this software will have to be released
+ under the MIT License
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://en.wikipedia.org/wiki/MIT_License
+\end_layout
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Hence it should bare the following license on top of all its files : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Copyright (C) 2012 Baptiste Bonnaudet
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Permission is hereby granted, free of charge, to any person
+\end_layout
+
+\begin_layout Plain Layout
+
+obtaining a copy of this software and associated documentation
+\end_layout
+
+\begin_layout Plain Layout
+
+files (the "Software"), to deal in the Software without 
+\end_layout
+
+\begin_layout Plain Layout
+
+restriction, including without limitation the rights to use,
+\end_layout
+
+\begin_layout Plain Layout
+
+copy, modify, merge, publish, distribute, sublicense, 
+\end_layout
+
+\begin_layout Plain Layout
+
+and/or sell copies of the Software, and to permit persons
+\end_layout
+
+\begin_layout Plain Layout
+
+to whom the Software is furnished to do so, subject to the 
+\end_layout
+
+\begin_layout Plain Layout
+
+following conditions:
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+The above copyright notice and this permission notice shall
+\end_layout
+
+\begin_layout Plain Layout
+
+be included in all copies or substantial portions of the Software.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY 
+\end_layout
+
+\begin_layout Plain Layout
+
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+\end_layout
+
+\begin_layout Plain Layout
+
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+\end_layout
+
+\begin_layout Plain Layout
+
+PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL
+\end_layout
+
+\begin_layout Plain Layout
+
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+\end_layout
+
+\begin_layout Plain Layout
+
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+\end_layout
+
+\begin_layout Plain Layout
+
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
+\end_layout
+
+\begin_layout Plain Layout
+
+THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
