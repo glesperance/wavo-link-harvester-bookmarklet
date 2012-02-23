@@ -95,7 +95,7 @@ released under the [MIT License](http://en.wikipedia.org/wiki/MIT\_License).
 
 Hence it should bare the following license on top of all its files :
 
-    Copyright (C) 2012 APPLICANTS_NAME
+    Copyright (C) 2012 APPLICANT_NAME
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
