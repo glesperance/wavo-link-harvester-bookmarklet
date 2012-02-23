@@ -10,8 +10,8 @@ music-videos from across the web and save them in their wavo
 collections.
 
 As a secondary purpose, the following module will be given as an
-assignment to *Baptiste Bonnaudet* in
-order to assess his programming skills as well as his ability to work in
+assignment to wavo applicants in
+order to assess their programming skills as well as their ability to work in
 an autonomous fashion when provided with general requirements.
 
 # Requirements
@@ -95,7 +95,7 @@ released under the [MIT License](http://en.wikipedia.org/wiki/MIT\_License).
 
 Hence it should bare the following license on top of all its files :
 
-    Copyright (C) 2012 Baptiste Bonnaudet
+    Copyright (C) 2012 APPLICANTS_NAME
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation
